@@ -67,8 +67,6 @@ const PokeList = () => {
       <h3>Poke List</h3>
       <List>
         {pokeList.map((pokemon) => {
-          // const { data } = await axios.get(pokemon.url);
-          // console.log(data, "data");
           const attack = pokemon.stats.find(
             ({ stat }) => stat.name === "attack"
           );
