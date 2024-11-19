@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.button-min {
+  background-color: red;
+  opacity: 0.7;
+  min-width: 50px;
+  border-radius: 5px;
+  color: white;
+  border: 1px solid;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.button-plus {
+  background-color: green;
+  opacity: 0.7;
+  min-width: 50px;
+  border-radius: 5px;
+  color: white;
+  border: 1px solid;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
