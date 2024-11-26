@@ -17,10 +17,10 @@ class Starwars extends React.Component {
     console.log("start wars - did mount");
     const allItems = [];
     const response = await axios("https://swapi.dev/api/people");
-    for (let i = 0; i < 1000; i++) {
-      const items = response.data.results;
-      allItems.push(...items);
-    }
+    // for (let i = 0; i < 1; i++) {
+    const items = response.data.results;
+    allItems.push(...items);
+    // }
     this.setState({
       starWarsList: allItems,
     });

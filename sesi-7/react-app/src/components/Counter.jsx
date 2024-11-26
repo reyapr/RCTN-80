@@ -24,6 +24,10 @@ class Counter extends React.Component {
     return isCountChange || isTitleChange;
   }
 
+  componentWillUnmount() {
+    localStorage.removeItem("APP_TITLE");
+  }
+
   render() {
     console.log("render counter");
 
@@ -36,7 +40,7 @@ class Counter extends React.Component {
           alignItems: "center",
         }}
       >
-        <h2>{this.props.title}</h2>
+        <h2>{this.props.title.toUpperCase()}</h2>
         <h3>{this.state.count}</h3>
         <br />
         <div style={{ display: "flex", gap: "13px" }}>

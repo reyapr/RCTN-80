@@ -25,6 +25,7 @@ const PokeList = () => {
     });
 
     const listData = await Promise.all(allAsyncData);
+    console.log(listData, "listData");
 
     setPokeList(listData);
   };

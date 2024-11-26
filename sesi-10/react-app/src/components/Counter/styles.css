@@ -1,0 +1,94 @@
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(145deg, #f3f4f6, #ffffff);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+}
+
+.counter-title {
+  color: #2d3748;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.counter-value {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #4a5568;
+  margin: 1rem 0;
+  transition: transform 0.3s ease;
+  padding: 1rem 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.counter-value.animate {
+  transform: scale(1.2);
+}
+
+.counter-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.counter-button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  font-weight: bold;
+}
+
+.counter-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.counter-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.increment {
+  background-color: #4299e1;
+}
+
+.increment:hover {
+  background-color: #3182ce;
+}
+
+.decrement {
+  background-color: #f56565;
+}
+
+.decrement:hover {
+  background-color: #e53e3e;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.counter-value.animate {
+  animation: pulse 0.3s ease-in-out;
+}

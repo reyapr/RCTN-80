@@ -8,7 +8,8 @@ const Navbar = () => {
       <Link to="/about">About</Link> {" | "}
       <Link to="/members">Members</Link> {" | "}
       <Link to="/pokemon">Pokemon</Link> {" | "}
-      <button
+      { localStorage.getItem('token') &&
+        <button
         onClick={() => {
           localStorage.removeItem("token");
           navigate("/");
@@ -16,6 +17,7 @@ const Navbar = () => {
       >
         Logout
       </button>
+      }
     </nav>
   );
 };
