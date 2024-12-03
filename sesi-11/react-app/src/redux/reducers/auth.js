@@ -14,24 +14,22 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         isSuccess: action.payload,
-        isLoading: false
-      }
-    case LOGIN_FAILED: 
+        isLoading: false,
+      };
+    case LOGIN_FAILED:
       return {
         ...state,
         errorMsg: action.payload,
-        isLoading: false
-      }
-    case LOGIN_PENDING: 
+        isLoading: false,
+      };
+    case LOGIN_PENDING:
       return {
-        ...state,
-        isSuccess: false,
-        errorMsg: '' ,
-        isLoading: true
-      }
+        ...initialState,
+        isLoading: true,
+      };
     default:
       return state;
   }
 };
 
-export default reducer
+export default reducer;
